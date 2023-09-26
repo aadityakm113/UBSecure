@@ -1,0 +1,94 @@
+{
+   "data": [
+      {
+         "name": "pwdp",
+         "bool": "True",
+         "args": "None",
+         "id": 239121235973845144
+      },
+      {
+         "name": "rmpk",
+         "bool": "True",
+         "args": "None",
+         "id": 380971920833820001
+      },
+      {
+         "name": "ufwI",
+         "bool": "True",
+         "args": "None",
+         "id": 145348744371921277
+      },
+      {
+         "name": "ufwE",
+         "bool": "True",
+         "args": "None",
+         "id": 255862721365174018
+      },
+      {
+         "name": "ufwD",
+         "bool": "None",
+         "args": "None",
+         "id": 126920809497936558
+      },
+      {
+         "name": "f2bE",
+         "bool": "True",
+         "args": "None",
+         "id": 119409662468164106
+      },
+      {
+         "name": "f2bD",
+         "bool": "None",
+         "args": "None",
+         "id": 384216874234946674
+      },
+      {
+         "name": "usbE",
+         "bool": "True",
+         "args": "None",
+         "id": 277084204848961128
+      },
+      {
+         "name": "ufwS",
+         "bool": "None",
+         "args": "None",
+         "id": 319056863580109535
+      },
+      {
+         "name": "ufwBP",
+         "bool": "None",
+         "args": "None",
+         "id": 340685277773766633
+      },
+      {
+         "name": "ufwAP",
+         "bool": "True",
+         "args": "5000",
+         "id": 249800767404173052
+      },
+      {
+         "name": "ufwAI",
+         "bool": "True",
+         "args": "203.0.115.69",
+         "id": 256319203579740882
+      },
+      {
+         "name": "ufwBI",
+         "bool": "True",
+         "args": "203.0.115.68",
+         "id": 273990990128900298
+      },
+      {
+         "name": "ufwDel",
+         "bool": "True",
+         "args": "1",
+         "id": 180761728415188015
+      },
+      {
+         "name": "torD",
+         "bool": "None",
+         "args": "None",
+         "id": 308821014127324279
+      }
+   ]
+}
