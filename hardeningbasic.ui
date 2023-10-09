@@ -31,10 +31,10 @@
   <widget class="QLabel" name="bluebar">
    <property name="geometry">
     <rect>
-     <x>260</x>
+     <x>0</x>
      <y>10</y>
-     <width>981</width>
-     <height>31</height>
+     <width>1241</width>
+     <height>45</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -47,16 +47,16 @@
   <widget class="QPushButton" name="helpbutton">
    <property name="geometry">
     <rect>
-     <x>1110</x>
+     <x>1100</x>
      <y>10</y>
      <width>121</width>
-     <height>31</height>
+     <height>45</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Segoe UI Semibold</family>
-     <pointsize>9</pointsize>
+     <pointsize>12</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
@@ -69,19 +69,19 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
     <string>Help</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="benchmarkingbutton">
+  <widget class="QPushButton" name="benchmarkingbuttton">
    <property name="geometry">
     <rect>
-     <x>650</x>
+     <x>880</x>
      <y>10</y>
      <width>121</width>
-     <height>31</height>
+     <height>45</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Segoe UI Semibold</family>
-     <pointsize>9</pointsize>
+     <pointsize>11</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
@@ -97,16 +97,16 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
   <widget class="QPushButton" name="hardeningbutton">
    <property name="geometry">
     <rect>
-     <x>460</x>
+     <x>640</x>
      <y>10</y>
      <width>121</width>
-     <height>31</height>
+     <height>45</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Segoe UI Semibold</family>
-     <pointsize>9</pointsize>
+     <pointsize>12</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
@@ -122,16 +122,16 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
   <widget class="QPushButton" name="homebutton">
    <property name="geometry">
     <rect>
-     <x>260</x>
+     <x>400</x>
      <y>10</y>
      <width>121</width>
-     <height>31</height>
+     <height>45</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Segoe UI Semibold</family>
-     <pointsize>9</pointsize>
+     <pointsize>11</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
@@ -147,9 +147,159 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
   <widget class="QLabel" name="titlelabel">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>0</y>
+     <x>30</x>
+     <y>10</y>
      <width>231</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Sitka</family>
+     <pointsize>28</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(79, 135, 255);</string>
+   </property>
+   <property name="text">
+    <string>Secura</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="passpolicies">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>100</y>
+     <width>291</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Password Policies                      :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="removepackages">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>150</y>
+     <width>291</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Remove unecessary Packages  :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ufw">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>200</y>
+     <width>291</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>UFW                                           :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="fail2ban">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>250</y>
+     <width>301</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Fail2ban                                     :                                 </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="storageaccess">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>300</y>
+     <width>311</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>USB storage access                   :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="service">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>350</y>
+     <width>311</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Tor service                                 :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="hservice">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>60</y>
+     <width>281</width>
      <height>51</height>
     </rect>
    </property>
@@ -162,157 +312,24 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
     </font>
    </property>
    <property name="text">
-    <string>EscutcheonOS</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="passpolicies">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>130</y>
-     <width>281</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Segoe UI Light</family>
-     <pointsize>11</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Password Policies                   :</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="removepackages">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>190</y>
-     <width>281</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Segoe UI Light</family>
-     <pointsize>11</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Remove unecessary Packages:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="ufw">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>250</y>
-     <width>291</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Segoe UI Light</family>
-     <pointsize>11</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>UFW                                      :</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="fail2ban">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>310</y>
-     <width>301</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Segoe UI Light</family>
-     <pointsize>11</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Fail2ban                                 :</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="storageaccess">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>370</y>
-     <width>311</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Segoe UI Light</family>
-     <pointsize>11</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>USB storage access                :</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="service">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>430</y>
-     <width>311</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Segoe UI Light</family>
-     <pointsize>11</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Tor service                             :</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="hservice">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>90</y>
-     <width>281</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Segoe UI Semibold</family>
-     <pointsize>14</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>Hardening services                </string>
+    <string>Hardening services</string>
    </property>
   </widget>
   <widget class="QPushButton" name="advanced">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>480</y>
+     <x>330</x>
+     <y>450</y>
      <width>93</width>
      <height>28</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Segoe UI Semilight</family>
+     <family>Segoe UI Semibold</family>
      <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -322,10 +339,10 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>140</y>
-     <width>290</width>
-     <height>31</height>
+     <x>329</x>
+     <y>105</y>
+     <width>321</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="title">
@@ -335,70 +352,79 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>7</y>
+      <y>10</y>
       <width>95</width>
       <height>20</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Segoe UI Light</family>
+      <family>Segoe UI Semibold</family>
       <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
-     <string>Yes</string>
+     <string>Weak</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
     </property>
     <property name="checked">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QRadioButton" name="ppno">
     <property name="geometry">
      <rect>
       <x>120</x>
-      <y>7</y>
-      <width>95</width>
+      <y>10</y>
+      <width>111</width>
       <height>20</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Segoe UI Semilight</family>
+      <family>Segoe UI Semibold</family>
       <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
-     <string>No</string>
+     <string>Moderate</string>
     </property>
    </widget>
    <widget class="QRadioButton" name="ppno_2">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>7</y>
-      <width>95</width>
-      <height>20</height>
+      <x>234</x>
+      <y>9</y>
+      <width>81</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Segoe UI Semilight</family>
+      <family>Segoe UI Semibold</family>
       <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
-     <string>None</string>
+     <string>Strong</string>
     </property>
    </widget>
   </widget>
   <widget class="QGroupBox" name="groupBox_2">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>200</y>
-     <width>290</width>
-     <height>31</height>
+     <x>329</x>
+     <y>160</y>
+     <width>311</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="title">
@@ -415,15 +441,20 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
     </property>
     <property name="font">
      <font>
-      <family>Segoe UI Light</family>
+      <family>Segoe UI Semibold</family>
       <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
      <string>Yes</string>
     </property>
-    <property name="checked">
+    <property name="checkable">
      <bool>true</bool>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QRadioButton" name="rupno">
@@ -437,41 +468,24 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
     </property>
     <property name="font">
      <font>
-      <family>Segoe UI Semilight</family>
+      <family>Segoe UI Semibold</family>
       <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
      <string>No</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="ppno_3">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>7</y>
-      <width>95</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI Semilight</family>
-      <pointsize>11</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>None</string>
-    </property>
-   </widget>
   </widget>
   <widget class="QGroupBox" name="groupBox_3">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>260</y>
-     <width>290</width>
-     <height>31</height>
+     <x>329</x>
+     <y>210</y>
+     <width>311</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="title">
@@ -488,15 +502,20 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
     </property>
     <property name="font">
      <font>
-      <family>Segoe UI Light</family>
+      <family>Segoe UI Semibold</family>
       <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
-     <string>Yes</string>
+     <string>Enable</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
     </property>
     <property name="checked">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QRadioButton" name="ufwno">
@@ -510,41 +529,24 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
     </property>
     <property name="font">
      <font>
-      <family>Segoe UI Semilight</family>
+      <family>Segoe UI Semibold</family>
       <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
-     <string>No</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="ppno_4">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>7</y>
-      <width>95</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI Semilight</family>
-      <pointsize>11</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>None</string>
+     <string>Disable</string>
     </property>
    </widget>
   </widget>
   <widget class="QGroupBox" name="groupBox_4">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>330</y>
-     <width>290</width>
-     <height>31</height>
+     <x>329</x>
+     <y>260</y>
+     <width>311</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="title">
@@ -561,15 +563,20 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
     </property>
     <property name="font">
      <font>
-      <family>Segoe UI Light</family>
+      <family>Segoe UI Semibold</family>
       <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
-     <string>Yes</string>
+     <string>Enable</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
     </property>
     <property name="checked">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QRadioButton" name="fail2banno">
@@ -583,41 +590,24 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
     </property>
     <property name="font">
      <font>
-      <family>Segoe UI Semilight</family>
+      <family>Segoe UI Semibold</family>
       <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
-     <string>No</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="ppno_5">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>7</y>
-      <width>95</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI Semilight</family>
-      <pointsize>11</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>None</string>
+     <string>Disable</string>
     </property>
    </widget>
   </widget>
   <widget class="QGroupBox" name="groupBox_5">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>390</y>
-     <width>290</width>
-     <height>31</height>
+     <x>329</x>
+     <y>320</y>
+     <width>311</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="title">
@@ -634,15 +624,20 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
     </property>
     <property name="font">
      <font>
-      <family>Segoe UI Light</family>
+      <family>Segoe UI Semibold</family>
       <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
-     <string>Yes</string>
+     <string>Enable</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
     </property>
     <property name="checked">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QRadioButton" name="usbno">
@@ -656,41 +651,24 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
     </property>
     <property name="font">
      <font>
-      <family>Segoe UI Semilight</family>
+      <family>Segoe UI Semibold</family>
       <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
-     <string>No</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="ppno_6">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>7</y>
-      <width>95</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI Semilight</family>
-      <pointsize>11</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>None</string>
+     <string>Disable</string>
     </property>
    </widget>
   </widget>
   <widget class="QGroupBox" name="groupBox_6">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>440</y>
-     <width>290</width>
-     <height>31</height>
+     <x>329</x>
+     <y>370</y>
+     <width>311</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="title">
@@ -710,12 +688,14 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
     </property>
     <property name="font">
      <font>
-      <family>Segoe UI Light</family>
+      <family>Segoe UI Semibold</family>
       <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
-     <string>Yes</string>
+     <string>Enable</string>
     </property>
     <property name="checkable">
      <bool>true</bool>
@@ -735,47 +715,32 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
     </property>
     <property name="font">
      <font>
-      <family>Segoe UI Semilight</family>
+      <family>Segoe UI Semibold</family>
       <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
-     <string>No</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="ppno_7">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>7</y>
-      <width>95</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI Semilight</family>
-      <pointsize>11</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>None</string>
+     <string>Disable</string>
     </property>
    </widget>
   </widget>
   <widget class="QPushButton" name="hardenbutton">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>480</y>
+     <x>180</x>
+     <y>450</y>
      <width>93</width>
-     <height>28</height>
+     <height>30</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Segoe UI Semilight</family>
+     <family>Segoe UI Semibold</family>
      <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -786,15 +751,17 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>480</y>
+     <y>450</y>
      <width>93</width>
-     <height>28</height>
+     <height>30</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Segoe UI Semilight</family>
+     <family>Segoe UI Semibold</family>
      <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -805,16 +772,16 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
    <property name="geometry">
     <rect>
      <x>660</x>
-     <y>50</y>
+     <y>90</y>
      <width>571</width>
-     <height>481</height>
+     <height>441</height>
     </rect>
    </property>
    <property name="text">
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>../SecuraUI/p9.jpg</pixmap>
+    <pixmap>../../SecuraUI/p9.jpg</pixmap>
    </property>
   </widget>
  </widget>

@@ -31,10 +31,10 @@
   <widget class="QLabel" name="bluebar">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>15</y>
-     <width>1241</width>
-     <height>31</height>
+     <x>-10</x>
+     <y>10</y>
+     <width>1261</width>
+     <height>45</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -47,16 +47,16 @@
   <widget class="QPushButton" name="helpbutton">
    <property name="geometry">
     <rect>
-     <x>1100</x>
-     <y>15</y>
+     <x>1090</x>
+     <y>10</y>
      <width>121</width>
-     <height>31</height>
+     <height>45</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Segoe UI Semibold</family>
-     <pointsize>9</pointsize>
+     <pointsize>11</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
@@ -72,16 +72,16 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
   <widget class="QPushButton" name="benchmarkingbuttton">
    <property name="geometry">
     <rect>
-     <x>618</x>
-     <y>15</y>
+     <x>860</x>
+     <y>10</y>
      <width>121</width>
-     <height>31</height>
+     <height>45</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Segoe UI Semibold</family>
-     <pointsize>9</pointsize>
+     <pointsize>11</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
@@ -97,16 +97,16 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
   <widget class="QPushButton" name="hardeningbutton">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>15</y>
+     <x>630</x>
+     <y>10</y>
      <width>121</width>
-     <height>31</height>
+     <height>45</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Segoe UI Semibold</family>
-     <pointsize>9</pointsize>
+     <pointsize>11</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
@@ -122,16 +122,16 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
   <widget class="QPushButton" name="homebutton">
    <property name="geometry">
     <rect>
-     <x>182</x>
-     <y>15</y>
+     <x>400</x>
+     <y>10</y>
      <width>121</width>
-     <height>31</height>
+     <height>45</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Segoe UI Semibold</family>
-     <pointsize>9</pointsize>
+     <pointsize>11</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
@@ -147,10 +147,35 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
   <widget class="QLabel" name="titlelabel">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>181</width>
-     <height>51</height>
+     <x>20</x>
+     <y>10</y>
+     <width>171</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Sitka</family>
+     <pointsize>28</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(79, 135, 255);
+</string>
+   </property>
+   <property name="text">
+    <string>Secura</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lynuscandetails">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>70</y>
+     <width>311</width>
+     <height>40</height>
     </rect>
    </property>
    <property name="font">
@@ -162,120 +187,105 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
     </font>
    </property>
    <property name="text">
-    <string>EscutcheonOS</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lynuscandetails">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>80</y>
-     <width>311</width>
-     <height>71</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Segoe UI Semilight</family>
-     <pointsize>12</pointsize>
-     <weight>50</weight>
-     <bold>false</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>Lynus security scan details:</string>
+    <string>Benchmarking</string>
    </property>
   </widget>
   <widget class="QLabel" name="hardeningindex">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>140</y>
-     <width>151</width>
-     <height>51</height>
+     <x>20</x>
+     <y>120</y>
+     <width>291</width>
+     <height>35</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Segoe UI Semilight</family>
+     <family>Segoe UI Semibold</family>
      <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
-    <string> Hardening index:</string>
+    <string> Hardening index                         :</string>
    </property>
   </widget>
   <widget class="QLabel" name="testsperformed">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>190</y>
-     <width>161</width>
-     <height>51</height>
+     <x>20</x>
+     <y>170</y>
+     <width>291</width>
+     <height>35</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Segoe UI Semilight</family>
+     <family>Segoe UI Semibold</family>
      <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
-    <string>Tests performed:</string>
+    <string>Tests performed                           :</string>
    </property>
   </widget>
   <widget class="QLabel" name="pluginsenabled">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>240</y>
-     <width>161</width>
-     <height>51</height>
+     <x>20</x>
+     <y>220</y>
+     <width>301</width>
+     <height>35</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Segoe UI Semilight</family>
+     <family>Segoe UI Semibold</family>
      <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
-    <string>Plugins enabled:</string>
+    <string>Plugins enabled                           :</string>
    </property>
   </widget>
-  <widget class="QLabel" name="hardeningiput">
+  <widget class="QLabel" name="label_7">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>140</y>
+     <x>390</x>
+     <y>120</y>
      <width>171</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="testsperformedinput">
+  <widget class="QLabel" name="label_8">
    <property name="geometry">
     <rect>
      <x>380</x>
-     <y>190</y>
-     <width>171</width>
-     <height>21</height>
+     <y>170</y>
+     <width>181</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="pluginsinput">
+  <widget class="QLabel" name="label_9">
    <property name="geometry">
     <rect>
      <x>380</x>
-     <y>240</y>
-     <width>171</width>
-     <height>21</height>
+     <y>220</y>
+     <width>181</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
@@ -286,58 +296,62 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>350</y>
-     <width>500</width>
-     <height>150</height>
+     <y>340</y>
+     <width>481</width>
+     <height>161</height>
     </rect>
    </property>
   </widget>
   <widget class="QTextBrowser" name="textBrowser_2">
    <property name="geometry">
     <rect>
-     <x>710</x>
-     <y>350</y>
-     <width>500</width>
-     <height>150</height>
+     <x>640</x>
+     <y>340</y>
+     <width>491</width>
+     <height>161</height>
     </rect>
    </property>
   </widget>
-  <widget class="QLabel" name="warningselabel">
+  <widget class="QLabel" name="warnings">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>290</y>
+     <x>20</x>
+     <y>270</y>
+     <width>301</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Warnings   :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="suggestions">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>270</y>
      <width>161</width>
      <height>51</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Segoe UI Semilight</family>
+     <family>Segoe UI Semibold</family>
      <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
-    <string>Warnings:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Suggestionslabel">
-   <property name="geometry">
-    <rect>
-     <x>710</x>
-     <y>290</y>
-     <width>161</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Segoe UI Semilight</family>
-     <pointsize>11</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Suggestions:</string>
+    <string>Suggestions   :</string>
    </property>
   </widget>
  </widget>
