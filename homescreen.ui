@@ -47,7 +47,7 @@
   <widget class="QPushButton" name="homebutton">
    <property name="geometry">
     <rect>
-     <x>400</x>
+     <x>300</x>
      <y>10</y>
      <width>121</width>
      <height>45</height>
@@ -72,7 +72,7 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
   <widget class="QPushButton" name="hardeningbutton">
    <property name="geometry">
     <rect>
-     <x>630</x>
+     <x>500</x>
      <y>10</y>
      <width>121</width>
      <height>45</height>
@@ -91,13 +91,13 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
 border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));</string>
    </property>
    <property name="text">
-    <string>Hardening</string>
+    <string>Harden</string>
    </property>
   </widget>
   <widget class="QPushButton" name="benchmarkingbuttton">
    <property name="geometry">
     <rect>
-     <x>860</x>
+     <x>900</x>
      <y>10</y>
      <width>121</width>
      <height>45</height>
@@ -116,13 +116,13 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
 border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));</string>
    </property>
    <property name="text">
-    <string>Benchmarking</string>
+    <string>Benchmark</string>
    </property>
   </widget>
   <widget class="QLabel" name="titlelabel">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>0</x>
      <y>10</y>
      <width>181</width>
      <height>39</height>
@@ -141,7 +141,7 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
 </string>
    </property>
    <property name="text">
-    <string>Secura</string>
+    <string>UBSecure</string>
    </property>
   </widget>
   <widget class="QPushButton" name="helpbutton">
@@ -203,9 +203,9 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
   <widget class="QLabel" name="sysinfolabel">
    <property name="geometry">
     <rect>
-     <x>29</x>
+     <x>30</x>
      <y>70</y>
-     <width>251</width>
+     <width>250</width>
      <height>51</height>
     </rect>
    </property>
@@ -245,7 +245,7 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
     </font>
    </property>
    <property name="text">
-    <string>Program Version                    :</string>
+    <string>Program Version:</string>
    </property>
   </widget>
   <widget class="QLabel" name="os">
@@ -266,7 +266,7 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
     </font>
    </property>
    <property name="text">
-    <string>Operating System                  :</string>
+    <string>Operating System:</string>
    </property>
   </widget>
   <widget class="QLabel" name="osname">
@@ -287,7 +287,7 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
     </font>
    </property>
    <property name="text">
-    <string>Operating System Name       :</string>
+    <string>Operating System Name:</string>
    </property>
   </widget>
   <widget class="QLabel" name="osversion">
@@ -308,7 +308,7 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
     </font>
    </property>
    <property name="text">
-    <string>Operating System Version    :  </string>
+    <string>Operating System Version: </string>
    </property>
   </widget>
   <widget class="QLabel" name="kernelversion">
@@ -329,7 +329,7 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
     </font>
    </property>
    <property name="text">
-    <string>Kernel Version                       :</string>
+    <string>Kernel Version:</string>
    </property>
   </widget>
   <widget class="QLabel" name="hardwareplatform">
@@ -350,7 +350,7 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
     </font>
    </property>
    <property name="text">
-    <string>Hardware platform                :</string>
+    <string>Hardware platform:</string>
    </property>
   </widget>
   <widget class="QLabel" name="hostnamelabel">
@@ -371,15 +371,15 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
     </font>
    </property>
    <property name="text">
-    <string>Hostname                              :</string>
+    <string>Hostname:</string>
    </property>
   </widget>
   <widget class="QLabel" name="progversioninput">
    <property name="geometry">
     <rect>
-     <x>450</x>
+     <x>460</x>
      <y>120</y>
-     <width>151</width>
+     <width>131</width>
      <height>31</height>
     </rect>
    </property>
@@ -390,9 +390,9 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
   <widget class="QLabel" name="osinput">
    <property name="geometry">
     <rect>
-     <x>450</x>
+     <x>460</x>
      <y>170</y>
-     <width>151</width>
+     <width>131</width>
      <height>31</height>
     </rect>
    </property>
@@ -403,9 +403,9 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
   <widget class="QLabel" name="osnameinput">
    <property name="geometry">
     <rect>
-     <x>450</x>
+     <x>460</x>
      <y>220</y>
-     <width>161</width>
+     <width>131</width>
      <height>31</height>
     </rect>
    </property>
@@ -416,9 +416,9 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
   <widget class="QLabel" name="osversioninput">
    <property name="geometry">
     <rect>
-     <x>450</x>
+     <x>460</x>
      <y>270</y>
-     <width>151</width>
+     <width>131</width>
      <height>31</height>
     </rect>
    </property>
@@ -429,9 +429,9 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
   <widget class="QLabel" name="kernelversioninput">
    <property name="geometry">
     <rect>
-     <x>450</x>
+     <x>460</x>
      <y>320</y>
-     <width>151</width>
+     <width>131</width>
      <height>31</height>
     </rect>
    </property>
@@ -442,9 +442,9 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
   <widget class="QLabel" name="hardwareplatforminput">
    <property name="geometry">
     <rect>
-     <x>450</x>
+     <x>460</x>
      <y>370</y>
-     <width>151</width>
+     <width>131</width>
      <height>31</height>
     </rect>
    </property>
@@ -455,9 +455,9 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
   <widget class="QLabel" name="hostnameinput">
    <property name="geometry">
     <rect>
-     <x>450</x>
+     <x>460</x>
      <y>420</y>
-     <width>151</width>
+     <width>131</width>
      <height>31</height>
     </rect>
    </property>
@@ -479,6 +479,31 @@ border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,
    </property>
    <property name="pixmap">
     <pixmap>../../SecuraUI/kk.jpg</pixmap>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="homebutton_2">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>10</y>
+     <width>121</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI Semibold</family>
+     <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(79, 135, 255);
+border-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));</string>
+   </property>
+   <property name="text">
+    <string>Network</string>
    </property>
   </widget>
  </widget>

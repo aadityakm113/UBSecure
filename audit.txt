@@ -73,7 +73,7 @@ Note: plugins have more extensive tests and may take several minutes to complete
 - Authentication:
 - PAM (Pluggable Authentication Modules):
 
-  [WARNING]: Test DEB-0001 had a long execution: 31.941428 seconds
+  [WARNING]: Test DEB-0001 had a long execution: 71.114361 seconds
 
 - libpam-tmpdir [ Not Installed ]
 - File System Checks:
@@ -160,7 +160,7 @@ CPU support: PAE and/or NoeXecute supported [ FOUND ]
 - Checking kernel version and release [ DONE ]
 - Checking kernel type [ DONE ]
 - Checking loaded kernel modules [ DONE ]
-Found 95 active modules
+Found 91 active modules
 - Checking Linux kernel configuration file [ FOUND ]
 - Checking default I/O kernel scheduler [ NOT FOUND ]
 - Checking for available kernel update [ OK ]
@@ -175,7 +175,7 @@ Found 95 active modules
 [+] Memory and Processes
 ------------------------------------
 - Checking /proc/meminfo [ FOUND ]
-- Searching for dead/zombie processes [ FOUND ]
+- Searching for dead/zombie processes [ NOT FOUND ]
 - Searching for IO waiting processes [ NOT FOUND ]
 - Search prelink tooling [ NOT FOUND ]
 
@@ -232,7 +232,7 @@ Result: found 8 shells (valid shells: 8).
 - Mount options of /dev [ PARTIALLY HARDENED ]
 - Mount options of /dev/shm [ PARTIALLY HARDENED ]
 - Mount options of /run [ HARDENED ]
-- Total without nodev:11 noexec:30 nosuid:26 ro or noexec (W^X): 13 of total 48
+- Total without nodev:10 noexec:29 nosuid:25 ro or noexec (W^X): 12 of total 47
 - Disable kernel support of some filesystems
 
 [+] USB Devices
@@ -265,8 +265,8 @@ Result: found 8 shells (valid shells: 8).
 - Searching package managers
 - Searching dpkg package manager [ FOUND ]
 - Querying package manager
-
-  [WARNING]: Test PKGS-7345 had a long execution: 29.591161 seconds
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+  [WARNING]: Test PKGS-7345 had a long execution: 55.528894 seconds
 
 - Query unpurged packages [ FOUND ]
 - Checking security repository in sources.list file [ OK ]
@@ -330,7 +330,7 @@ No database engines found
 [+] PHP
 ------------------------------------
 - Checking PHP [ NOT FOUND ]
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 [+] Squid Support
 ------------------------------------
 - Checking running Squid daemon [ NOT FOUND ]
@@ -385,13 +385,13 @@ No database engines found
 ------------------------------------
 - NTP daemon found: systemd (timesyncd) [ FOUND ]
 - Checking for a running NTP daemon or client [ OK ]
-- Last time synchronization [ 685s ]
+- Last time synchronization [ 218s ]
 
 [+] Cryptography
 ------------------------------------
 - Checking for expired SSL certificates [0/142] [ NONE ]
 
-  [WARNING]: Test CRYP-7902 had a long execution: 33.941506 seconds
+  [WARNING]: Test CRYP-7902 had a long execution: 59.670556 seconds
 
 - Kernel entropy is sufficient [ YES ]
 - HW RNG & rngd [ NO ]
@@ -512,7 +512,7 @@ Directory: /etc/cron.monthly [ SUGGESTION ]
 
   Great, no warnings
 
-  Suggestions (44):
+  Suggestions (43):
   ----------------------------
   * This release is more than 4 months old. Check the website or GitHub to see if there is an update available. [LYNIS] 
       https://cisofy.com/lynis/controls/LYNIS/
@@ -541,9 +541,6 @@ Directory: /etc/cron.monthly [ SUGGESTION ]
 
   * If not required, consider explicit disabling of core dump in /etc/security/limits.conf file [KRNL-5820] 
       https://cisofy.com/lynis/controls/KRNL-5820/
-
-  * Check the output of ps for dead or zombie processes [PROC-3612] 
-      https://cisofy.com/lynis/controls/PROC-3612/
 
   * Run pwck manually and correct any errors in the password file [AUTH-9228] 
       https://cisofy.com/lynis/controls/AUTH-9228/

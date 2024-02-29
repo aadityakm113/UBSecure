@@ -13,9 +13,9 @@ from PyQt5.uic import loadUi
 from PyQt5.QtWidgets import QDialog,QApplication,QLineEdit
 from PyQt5.QtGui import QFont
 import sys
+import subprocess as sp
 import pysondb as ps
 from hardener import hardener
-from hardener import access
 from hardener import makeDB
 from lynisInfo import sysinf
 from lynisInfo import scaninf
@@ -24,26 +24,17 @@ from lynisInfo import warnings
 from lynisInfo import remove_ansi_escape_codes
 import webbrowser
 
-class Ui_Openingpage(QDialog):
+class Ui_openingpage(QDialog):
     def __init__(self):
-        super(Ui_Openingpage,self).__init__()
-        loadUi("escutcheeon.ui",self)
-        self.pushButton.clicked.connect(self.gotoSudoRun)
-    def gotoSudoRun(self):
-        widget1.setCurrentIndex(1)
-class Ui_Dialog(QDialog):
-    def __init__(self):
-        super(Ui_Dialog,self).__init__()
-        loadUi("sudoinput.ui",self)
-        self.submitbutton.clicked.connect(self.getpass)
+        super(Ui_openingpage,self).__init__()
+        loadUi("loginpage.ui",self)
         self.lineEdit.setEchoMode(QtWidgets.QLineEdit.Password)
-
-    def getpass(self):
+        self.submitbutton.clicked.connect(self.getdetails)
+    def getdetails(self):
+        userid=self.lineEdit_2.text()
         password=self.lineEdit.text()
-        print(password)
-        a = access(password)
         widget1.setCurrentIndex(widget1.currentIndex()+1)
-
+        
 class Ui_home(QDialog):
     def __init__(self, d,s):
         super(Ui_home,self).__init__()
@@ -51,8 +42,9 @@ class Ui_home(QDialog):
         self.score = s
         self.details = d
 
-        self.benchmarkingbutton.clicked.connect(self.gotoBenchmarking)
+        self.benchmarkingbuttton.clicked.connect(self.gotoBenchmarking)
         self.hardeningbutton.clicked.connect(self.gotoHardening)
+        self.homebutton_2.clicked.connect(self.gotoAdvanced)
         self.progversioninput.setText(self.details[0])
         self.progversioninput.setFont(QFont('Segoe UI ',11))
         self.osinput.setText(self.details[1])
@@ -70,11 +62,13 @@ class Ui_home(QDialog):
         self.helpbutton.clicked.connect(self.gotoPage)
         self.lcdNumber.display(int(self.score))
     def gotoPage(self):
-        webbrowser.open("https://pranav-p92.github.io/HELP-PAGE/index.html")
+        webbrowser.open("https://sih-grind.github.io/Help-Page/")
 
     def gotoBenchmarking(self):
         widget1.setCurrentIndex(widget1.currentIndex()+1)
     def gotoHardening(self):
+        widget1.setCurrentIndex(3)
+    def gotoAdvanced(self):
         widget1.setCurrentIndex(4)
     def get_deets(self, d):
         self.details = d
@@ -84,25 +78,26 @@ class Ui_home(QDialog):
 class Ui_benchmarking(QDialog):
     def __init__(self, a, b, c):
         self.deets = a
-        self.warnings = b
-        self.suggestions = c
+        self.w = b
+        self.s = c
         super(Ui_benchmarking,self).__init__()
-        loadUi("benchmarking.ui",self)
+        loadUi("benchmark.ui",self)
         self.homebutton.clicked.connect(self.gotoHome)
         self.hardeningbutton.clicked.connect(self.gotoHardening)
-        self.hardeningiput.setText(self.deets[0])
-        self.hardeningiput.setFont(QFont('Segoe UI Semilight',12))
-        self.testsperformedinput.setText(self.deets[1])
-        self.testsperformedinput.setFont(QFont('Segoe UI Semilight',12))
-        self.pluginsinput.setText(self.deets[2])
-        self.pluginsinput.setFont(QFont('Segoe UI Semilight',12))
+        self.hardeningbutton_2.clicked.connect(self.gotoAdvanced)
+        self.label_6.setText(self.deets[0])
+        self.label_6.setFont(QFont('Segoe UI Semilight',12))
+        self.label_8.setText(self.deets[1])
+        self.label_8.setFont(QFont('Segoe UI Semilight',12))
+        self.label_9.setText(self.deets[2])
+        self.label_9.setFont(QFont('Segoe UI Semilight',12))
         self.textBrowser.setAcceptRichText(True)
-        self.textBrowser.append(self.warnings)
+        self.textBrowser.append(str(self.w))
         self.textBrowser_2.setAcceptRichText(True)
-        self.textBrowser_2.append(self.suggestions)
+        self.textBrowser_2.append(str(self.s))
         self.helpbutton.clicked.connect(self.gotoPage)
     def gotoPage(self):
-        webbrowser.open("https://pranav-p92.github.io/HELP-PAGE/index.html")
+        webbrowser.open("https://sih-grind.github.io/Help-Page/")
     def get_deets(self, d):
         self.deets = d
     def get_warnings(self,s):
@@ -110,9 +105,11 @@ class Ui_benchmarking(QDialog):
     def get_suggestions(self,s):
         self.suggestions = s
     def gotoHardening(self):
-        widget1.setCurrentIndex(4)
+        widget1.setCurrentIndex(3)
     def gotoHome(self):
-        widget1.setCurrentIndex(2)
+        widget1.setCurrentIndex(1)
+    def gotoAdvanced(self):
+        widget1.setCurrentIndex(4)
     def show_deets(self):
         print(self.deets)
 
@@ -121,84 +118,95 @@ class Ui_Hardening(QDialog):
         self.db = ps.getDb('bool.json')
         self.dict={'Password Policies' : "" ,"Remove Unecessary Packages" : "" ,'UFW' : "" ,'fail2ban' : "" ,'USB Storage Access' : "" ,'TOR Service' : "" ,}
         super(Ui_Hardening,self).__init__()
-        loadUi("hardeningbasic.ui",self)
+        loadUi("harden.ui",self)
         self.homebutton.clicked.connect(self.gotoHome)
+        self.hardeningbutton_2.clicked.connect(self.gotoAdvanced)
         self.savebutton.clicked.connect(self.Save)
-        self.advanced.clicked.connect(self.gotoAdvanced)
         self.hardenbutton.clicked.connect(self.Harden)
-        self.benchmarkingbutton.clicked.connect(self.gotoBenchmarking)
+        self.benchmarkingbuttton.clicked.connect(self.gotoBenchmarking)
         self.helpbutton.clicked.connect(self.gotoPage)
     def gotoPage(self):
-        webbrowser.open("https://pranav-p92.github.io/HELP-PAGE/index.html")
+        webbrowser.open("https://sih-grind.github.io/Help-Page/")
     def Harden(self):
         hard = hardener()
         hard.harden()
         remove_ansi_escape_codes()
     def gotoBenchmarking(self):
-        widget1.setCurrentIndex(3)
+        widget1.setCurrentIndex(2)
     def gotoAdvanced(self):
-        widget1.setCurrentIndex(5)
+        widget1.setCurrentIndex(4)
     def Save(self):
         #remove orphan packages
-        if self.rupyes.isChecked()==True or self.rupno.isChecked()==True:
+        #yes
+        if self.rupyes.isChecked()==True:
             self.db.updateByQuery({'name':'rmpk'},{'bool':'True'})
-        elif self.ppno_2.isChecked()==True:
+        #no
+        elif self.rupno.isChecked()==True:
             self.db.updateByQuery({'name':'rmpk'},{'bool':'None'})
+        
         #password policies
+        #weak
         if self.ppyes.isChecked()==True:
-            self.db.updateByQuery({'name':'pwdp'},{'bool':'True'})
+            self.db.updateByQuery({'name':'pwdp'},{'bool':'None'})
+        #moderate
         elif self.ppno.isChecked()==True:
             self.db.updateByQuery({'name':'pwdp'},{'bool':'None'})
+        #strong
         elif self.ppno_2.isChecked()==True:
-            self.db.updateByQuery({'name':'pwdp'},{'bool':'None'})
+            self.db.updateByQuery({'name':'pwdp'},{'bool':'True'})
         #ufw
+        #enable
         if self.ufwyes.isChecked()==True:
             self.db.updateByQuery({'name':'ufwI'},{'bool':'True'})
-            self.db.updateByQuery({'name':'ufwE'},{'bool':'True'})
+            #self.db.updateByQuery({'name':'ufwE'},{'bool':'True'})
+        #disable
         elif self.ufwno.isChecked()==True:
-            self.db.updateByQuery({'name':'ufwD'},{'bool':'None'})
-        elif self.ppno_4.isChecked()==True:
-            self.db.updateByQuery({'name':'ufwD'},{'bool':'None'})
             self.db.updateByQuery({'name':'ufwI'},{'bool':'None'})
             self.db.updateByQuery({'name':'ufwE'},{'bool':'None'})
+            self.db.updateByQuery({'name':'ufwD'},{'bool':'True'})
+        
         #fail2ban
+        #enable
         if self.fail2banyes.isChecked()==True:
             self.db.updateByQuery({'name':'f2bE'},{'bool':'True'})
+        #disable
         elif self.fail2banno.isChecked()==True:
             self.db.updateByQuery({'name':'f2bD'},{'bool':'True'})
-        elif self.ppno_5.isChecked()==True:
-            self.db.updateByQuery({'name':'f2bE'},{'bool':'None'})
-            self.db.updateByQuery({'name':'f2bD'},{'bool':'None'})
+        
         #usb storage
+        #enable
         if self.usbsayes.isChecked()==True:
             self.db.updateByQuery({'name':'usbE'},{'bool':'True'})
+        #disable
         elif self.usbno.isChecked()==True:
             self.db.updateByQuery({'name':'usbE'},{'bool':'None'})
-        elif self.ppno_6.isChecked()==True:
-            self.db.updateByQuery({'name':'usbE'},{'bool':'None'})
+
         #tor
+        #enable
         if self.usbyes.isChecked()==True:
-            self.db.updateByQuery({'name':'torD'},{'bool':'None'})
+            self.db.updateByQuery({'name':'torD'},{'bool':'True'})
+        #disable
         elif self.usbno_2.isChecked()==True:
             self.db.updateByQuery({'name':'torD'},{'bool':'None'})
-        elif self.ppno_7.isChecked()==True:
-            self.db.updateByQuery({'name':'torD'},{'bool':'None'})
+
 
     def gotoHome(self):
-        widget1.setCurrentIndex(2)
+        widget1.setCurrentIndex(1)
 
 class Ui_hardeningadvanced(QDialog):
-    def __init__(self):
+    def __init__(self, rules):
         self.db = ps.getDb('bool.json')
         super(Ui_hardeningadvanced,self).__init__()
-        loadUi("hardeningadvanced.ui",self)
+        loadUi("network.ui",self)
         self.homebutton.clicked.connect(self.gotoHome)
-        self.benchmarkingbutton.clicked.connect(self.gotoBenchmarking)
+        self.textBrowser.setText(rules)
+        self.textBrowser.setFont(QFont('Segoe UI Semilight',12))
+        self.benchmarkingbuttton.clicked.connect(self.gotoBenchmarking)
         self.hardeningbutton.clicked.connect(self.gotoHardening)
         self.pushButton.clicked.connect(self.configAD)
         self.helpbutton.clicked.connect(self.gotoPage)
     def gotoPage(self):
-        webbrowser.open("https://pranav-p92.github.io/HELP-PAGE/index.html")
+        webbrowser.open("https://sih-grind.github.io/Help-Page/")
     def configAD(self):
         #ports
         if self.lineEdit.text():
@@ -217,13 +225,39 @@ class Ui_hardeningadvanced(QDialog):
             self.db.updateByQuery({'name':'ufwAI'},{'bool':'True', 'args': self.lineEdit_3.text()})
         if self.lineEdit_4.text():
             self.db.updateByQuery({'name':'ufwDel'},{'bool':'True', 'args': self.lineEdit_4.text()})
+        #ssh ports
+        ssh_ports=self.lineEdit_5.text()
+        if ssh_ports:
+            self.db.updateByQuery({'name':'sshp'},{'bool':'True', 'args': ssh_ports})
+        #Permit Root Login
+        #enable
+        if self.radioButton_3.isChecked()==True:
+            self.db.updateByQuery({'name':'sshRE'},{'bool':'True', 'args': 'None'})
+        #disable
+        elif self.radioButton_4.isChecked()==True:
+            self.db.updateByQuery({'name':'sshRD'},{'bool':'True', 'args': 'None'})
+        #Password Authentication
+        #enable
+        if self.radioButton_5.isChecked()==True:
+            self.db.updateByQuery({'name':'sshPAE'},{'bool':'True', 'args': 'None'})
+        #disable
+        elif self.radioButton_6.isChecked()==True:
+            self.db.updateByQuery({'name':'sshPAD'},{'bool':'True', 'args': 'None'})
+        #X11 Forwarding
+        #enable
+        if self.radioButton_7.isChecked()==True:
+            self.db.updateByQuery({'name':'sshXFE'},{'bool':'True', 'args': 'None'})
+        #disable
+        elif self.radioButton_8.isChecked()==True:
+            self.db.updateByQuery({'name':'sshXFD'},{'bool':'True', 'args': 'None'})
+
 
     def gotoHome(self):
-        widget1.setCurrentIndex(2)
+        widget1.setCurrentIndex(1)
     def gotoBenchmarking(self):
-        widget1.setCurrentIndex(3)
+        widget1.setCurrentIndex(2)
     def gotoHardening(self):
-        widget1.setCurrentIndex(4)
+        widget1.setCurrentIndex(3)
 
 
 
@@ -231,7 +265,7 @@ class Ui_hardeningadvanced(QDialog):
 
 
 #hard = hardener()
-#remove_ansi_escape_codes()
+remove_ansi_escape_codes()
 
 first = sysinf()
 second = scaninf()
@@ -240,15 +274,16 @@ fourth = suggestions()
 
 app = QApplication(sys.argv)
 widget1=QtWidgets.QStackedWidget()
-ui_openingpage=Ui_Openingpage()
-ui_dialog=Ui_Dialog()
+ui_openingpage=Ui_openingpage()
 ui_home=Ui_home(first, second[0])
 ui_benchmarking=Ui_benchmarking(second, third, fourth)
 ui_hardening=Ui_Hardening()
-ui_hardeningadvanced=Ui_hardeningadvanced()
+process = sp.Popen([f'sudo -S ufw status numbered'], stdin = sp.PIPE, stdout=sp.PIPE, shell=True)
+output, error = process.communicate("chai@1234".encode())
+process.wait()
+ui_hardeningadvanced=Ui_hardeningadvanced(output.decode())
 
 widget1.addWidget(ui_openingpage)
-widget1.addWidget(ui_dialog)
 widget1.addWidget(ui_home)
 widget1.addWidget(ui_benchmarking)
 widget1.addWidget(ui_hardening)
