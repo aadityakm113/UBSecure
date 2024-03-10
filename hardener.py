@@ -5,28 +5,13 @@ import pysondb as ps
 
 def makeDB():
     db = ps.getDb('bool.json')
-    db.addMany([{'name':'pwdp', 'bool':'None', 'args':'None'},
-                {'name':'rmpk', 'bool':'None', 'args':'None'},
-                {'name':'ufwI', 'bool':'None', 'args':'None'},
-                {'name':'ufwE', 'bool':'None', 'args':'None'},
-                {'name':'ufwD', 'bool':'None', 'args':'None'},
-                {'name':'f2bE', 'bool':'None', 'args':'None'},
-                {'name':'f2bD', 'bool':'None', 'args':'None'},
-                {'name':'usbE', 'bool':'None', 'args':'None'},
-                {'name':'ufwS', 'bool':'None', 'args':'None'},
-                {'name':'ufwBP', 'bool':'None', 'args':'None'},
-                {'name':'ufwAP', 'bool':'None', 'args':'None'},
-                {'name':'ufwAI', 'bool':'None', 'args':'None'},
-                {'name':'ufwBI', 'bool':'None', 'args':'None'},
-                {'name':'ufwDel', 'bool':'None', 'args':'None'},
-                {'name':'torD', 'bool':'None', 'args':'None'},
-                {'name':'sshp', 'bool':'None', 'args':'None'},
-                {'name':'sshPAE', 'bool':'None', 'args':'None'},
-                {'name':'sshPAD', 'bool':'None', 'args':'None'},
-                {'name':'sshRE', 'bool':'None', 'args':'None'},
-                {'name':'sshRD', 'bool':'None', 'args':'None'},
-                {'name':'sshXFE', 'bool':'None', 'args':'None'},
-                {'name':'sshXFD', 'bool':'None', 'args':'None'}])
+    if(db.getByQuery({'name':'None'})):
+        return
+    else :
+        db.addMany([
+            {'name':'None', 'settings':{}, 'templates':['None']},
+            {'name':'Network','settings':{}, 'templates':[]}
+            ])
 '''class access:
     def __init__(self, password):
         process = sp.Popen([f'sudo -S chown root:root /home/chaitanya/Desktop/progBackup/main.py'], stdin=sp.PIPE, stdout=sp.PIPE, shell=True)
@@ -39,60 +24,67 @@ def makeDB():
         print(output.decode())'''
         
 class hardener:
-    def __init__(self):
+    def __init__(self, su):
         '''with open('audit.txt','w') as f:
             p1=sp.run("lynis audit system",stdout=f,text=True, shell=True)'''
-        self.password="chai@1234"
+        self.password = su
+        self.output = []
             
-    def harden(self):
+    def harden(self, temp):
         db = ps.getDb('bool.json')
-        arr = db.getAll()
-        for i in arr:
-            if i['bool'] == 'True':
-                if i['name'] == 'pwdp':
+        arr = db.getByQuery(query = {'name':temp})
+        for key,value in arr[0]['settings'].items():
+            if value['bool'] == 'True':
+                if key == 'pwdp':
                     self.pswdpol()
-                elif i['name'] == 'rmpk':
+                elif key == 'rmpk':
                     self.removePacks()
-                elif i['name'] == 'ufwI':
+                elif key == 'ufwI':
                     self.installUFW()
-                elif i['name'] == 'ufwE':
+                elif key == 'ufwE':
                     self.enableUFW()
-                elif i['name'] == 'ufwD':
+                elif key == 'ufwD':
                     self.disableUFW()
-                elif i['name'] == 'f2bE':
+                elif key == 'f2bE':
                     self.enablefail2ban()
-                elif i['name'] == 'f2bD':
+                elif key == 'f2bD':
                     self.disablefail2ban()
-                elif i['name'] == 'usbE':
+                elif key == 'usbE':
                     print()
-                elif i['name'] == 'ufwS':
+                elif key == 'ufwS':
                     self.statusUFW()
-                elif i['name'] == 'ufwBP':
-                    self.blockPort(i['args'])
-                elif i['name'] == 'ufwAP':
-                    self.allowPort(i['args'])
-                elif i['name'] == 'ufwBI':
-                    self.blockIP(i['args'])
-                elif i['name'] == 'ufwAI':
-                    self.allowIP(i['args'])
-                elif i['name'] == 'torD':
+                elif key == 'ufwBP':
+                    if(value['args']!='None'):
+                        self.blockPort(value['args'])
+                elif key == 'ufwAP':
+                    if(value['args']!='None'):
+                        self.allowPort(value['args'])
+                elif key == 'ufwBI':
+                    if(value['args']!='None'):
+                        self.blockIP(value['args'])
+                elif key == 'ufwAI':
+                    if(value['args']!='None'):
+                        self.allowIP(value['args'])
+                elif key == 'torD':
                     self.distor()
-                elif i['name'] == 'ufwDel':
+                elif key == 'ufwDel':
                     print("Delete rule")
-                elif i['name'] == 'sshp':
-                	self.sshport(i['args'])
-                elif i['name'] == 'sshPAE':
+                elif key == 'sshp':
+                    if(value['args']!='None'):
+                        self.sshport(value['args'])
+                elif key == 'sshPAE':
                 	self.passauthE()
-                elif i['name'] == 'sshPAD':
+                elif key == 'sshPAD':
                 	self.passauthD()
-                elif i['name'] == 'sshRE':
+                elif key == 'sshRE':
                 	self.sshRootE()
-                elif i['name'] == 'sshRD':
+                elif key == 'sshRD':
                 	self.sshRootD()
-                elif i['name'] == 'sshXFE':
+                elif key == 'sshXFE':
                 	self.xforwardE()
-                elif i['name'] == 'sshXFD':
+                elif key == 'sshXFD':
                 	self.xforwardD()
+        return self.output
 
     def update(self):
         print("Updating the system")
@@ -128,107 +120,107 @@ class hardener:
         process = sp.Popen([f'sudo -S /home/chaitanya/Desktop/SIHPYQT/bash/deborphan.sh'], stdin = sp.PIPE, stdout=sp.PIPE, shell=True)
         output, error = process.communicate(self.password.encode())
         process.wait()
-        print(output.decode())
+        self.output.append(output.decode())
         
     def installUFW(self):
         print("Installing and enabling UFW")
         process = sp.Popen([f'sudo -S apt install ufw'], stdin = sp.PIPE, stdout=sp.PIPE, shell=True)
         output, error = process.communicate(self.password.encode())
         process.wait()
-        print(output.decode())
+        self.output.append(output.decode())
         process2 = sp.Popen([f'sudo -S ufw enable'], stdin = sp.PIPE, stdout=sp.PIPE, shell=True)
         output, error = process2.communicate(self.password.encode())
         process2.wait()
-        print(output.decode())
+        self.output.append(output.decode())
 
     def enableUFW(self):
         print("Enabling UFW")
         process2 = sp.Popen([f'sudo -S ufw enable'], stdin = sp.PIPE, stdout=sp.PIPE, shell=True)
         output, error = process2.communicate(self.password.encode())
         process2.wait()
-        print(output.decode())
+        self.output.append(output.decode())
         
     def disableUFW(self):
         print("Disabling UFW")
         process2 = sp.Popen([f'sudo -S ufw disable'], stdin = sp.PIPE, stdout=sp.PIPE, shell=True)
         output, error = process2.communicate(self.password.encode())
         process2.wait()
-        print(output.decode())
+        self.output.append(output.decode())
         
     def statusUFW(self):
         print("UFW status")
         process = sp.Popen([f'sudo -S ufw status numbered'], stdin = sp.PIPE, stdout=sp.PIPE, shell=True)
         output, error = process.communicate(self.password.encode())
         process.wait()
-        print(output.decode())
+        self.output.append(output.decode())
 
     def blockPort(self,port):
         print("Blocking port number ", port)
         process2 = sp.Popen([f'sudo -S ufw deny {port}'], stdin = sp.PIPE, stdout=sp.PIPE, shell=True)
         output, error = process2.communicate(self.password.encode())
         process2.wait()
-        print(output.decode())
+        self.output.append(output.decode())
 
     def allowPort(self,port):
         print("Allowing port number ", port)
         process2 = sp.Popen([f'sudo -S ufw allow {port}'], stdin = sp.PIPE, stdout=sp.PIPE, shell=True)
         output, error = process2.communicate(self.password.encode())
         process2.wait()
-        print(output.decode())
+        self.output.append(output.decode())
 
     def allowIP(self,ip):
         print("Whitelisting IP: ",ip)
         process2 = sp.Popen([f'sudo -S ufw allow from {ip}'], stdin = sp.PIPE, stdout=sp.PIPE, shell=True)
         output, error = process2.communicate(self.password.encode())
         process2.wait()
-        print(output.decode())
+        self.output.append(output.decode())
 
     def blockIP(self,ip):
         print("Blacklisting IP: ", ip)
         process2 = sp.Popen([f'sudo -S ufw deny from {ip}'], stdin = sp.PIPE, stdout=sp.PIPE, shell=True)
         output, error = process2.communicate(self.password.encode())
         process2.wait()
-        print(output.decode())
+        self.output.append(output.decode())
     
     def enablefail2ban(self):
         print("Installing and enabling Fail2ban")
         process = sp.Popen([f'sudo -S apt -y install fail2ban'], stdin = sp.PIPE, stdout=sp.PIPE, shell=True)
         output, error = process.communicate(self.password.encode())
         process.wait()
-        print(output.decode())
+        self.output.append(output.decode())
         process = sp.Popen([f'sudo systemctl enable fail2ban'], stdin = sp.PIPE, stdout=sp.PIPE, shell=True)
         output, error = process.communicate(self.password.encode())
         process.wait()
-        print(output.decode())
+        self.output.append(output.decode())
         process = sp.Popen([f'sudo systemctl start fail2ban'], stdin = sp.PIPE, stdout=sp.PIPE, shell=True)
         output, error = process.communicate(self.password.encode())
         process.wait()
-        print(output.decode())
+        self.output.append(output.decode())
         process = sp.Popen([f'sudo cp /etc/fail2ban/fail2ban.conf /etc/fail2ban/fail2ban.local'], stdin = sp.PIPE, stdout=sp.PIPE, shell=True)
         output, error = process.communicate(self.password.encode())
         process.wait()
-        print(output.decode())
+        self.output.append(output.decode())
         process = sp.Popen([f'sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local'], stdin = sp.PIPE, stdout=sp.PIPE, shell=True)
         output, error = process.communicate(self.password.encode())
         process.wait()
-        print(output.decode())
+        self.output.append(output.decode())
         process = sp.Popen([f'sudo systemctl restart fail2ban'], stdin = sp.PIPE, stdout=sp.PIPE, shell=True)
         output, error = process.communicate(self.password.encode())
         process.wait()
-        print(output.decode())
+        self.output.append(output.decode())
 
     def disablefail2ban(self):
         print("Disabling Fail2ban")
         process = sp.Popen([f'sudo -S apt-get purge --auto-remove fail2ban'], stdin = sp.PIPE, stdout=sp.PIPE, shell=True)
         output, error = process.communicate(self.password.encode())
         process.wait()
-        print(output.decode())
+        self.output.append(output.decode())
         
     def distor(self):
         process = sp.Popen([f"sudo -S /home/chaitanya/Desktop/SIHPYQT/bash/disabletor.sh"], stdin = sp.PIPE, stdout=sp.PIPE, shell=True)
         output, error = process.communicate(self.password.encode())
         process.wait()
-        print(output.decode())
+        self.output.append(output.decode())
         sp.run(["/home/chaitanya/Desktop/SIHPYQT/bash/disabletor.sh"], shell=True)
 
     def sshport(self, value):
@@ -236,46 +228,46 @@ class hardener:
         process = sp.Popen([f"sudo -S sed -i 's/#Port 2200/Port {value}/g' /etc/ssh/sshd_config"], stdin = sp.PIPE, stdout=sp.PIPE, shell=True)
         output, error = process.communicate(self.password.encode())
         process.wait()
-        print(output.decode())
+        self.output.append(output.decode())
 
     def passauthE(self):
         print("Enabling SSH password authentication")
         process = sp.Popen([f"sudo -S sed -i 's/#PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config"], stdin = sp.PIPE, stdout=sp.PIPE, shell=True)
         output, error = process.communicate(self.password.encode())
         process.wait()
-        print(output.decode())
+        self.output.append(output.decode())
 
     def passauthD(self):
         print("Disabling SSH password authentication")
         process = sp.Popen([f"sudo -S sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config"], stdin = sp.PIPE, stdout=sp.PIPE, shell=True)
         output, error = process.communicate(self.password.encode())
         process.wait()
-        print(output.decode())
+        self.output.append(output.decode())
 
     def sshRootE(self):
         print("Enabling root login for SSH")
         process = sp.Popen([f"sudo -S sed -i 's/PermitRootLogin no/PermitRootLogin yes/g' /etc/ssh/sshd_config"], stdin = sp.PIPE, stdout=sp.PIPE, shell=True)
         output, error = process.communicate(self.password.encode())
         process.wait()
-        print(output.decode())
+        self.output.append(output.decode())
 
     def sshRootD(self):
         print("Disabling root login for SSH")
         process = sp.Popen([f"sudo -S sed -i 's/PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config"], stdin = sp.PIPE, stdout=sp.PIPE, shell=True)
         output, error = process.communicate(self.password.encode())
         process.wait()
-        print(output.decode())
+        self.output.append(output.decode())
 
     def xforwardE(self):
         print("Enabling X11 forwarding for SSH")
         process = sp.Popen([f"sudo -S sed -i 's/X11Forwarding no/X11Forwarding yes/g' /etc/ssh/sshd_config"], stdin = sp.PIPE, stdout=sp.PIPE, shell=True)
         output, error = process.communicate(self.password.encode())
         process.wait()
-        print(output.decode())
+        self.output.append(output.decode())
 
     def xforwardD(self):
         print("Disabling X11 forwarding for SSH")
         process = sp.Popen([f"sudo -S sed -i 's/X11Forwarding yes/X11Forwarding no/g' /etc/ssh/sshd_config"], stdin = sp.PIPE, stdout=sp.PIPE, shell=True)
         output, error = process.communicate(self.password.encode())
         process.wait()
-        print(output.decode())
+        self.output.append(output.decode())

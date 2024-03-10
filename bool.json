@@ -1,532 +1,203 @@
 {
    "data": [
       {
-         "name": "pwdp",
-         "bool": "None",
-         "args": "None",
-         "id": 326724853050043943
-      },
-      {
-         "name": "rmpk",
-         "bool": "True",
-         "args": "None",
-         "id": 332229282697495453
-      },
-      {
-         "name": "ufwI",
-         "bool": "True",
-         "args": "None",
-         "id": 256018396983239556
-      },
-      {
-         "name": "ufwE",
-         "bool": "None",
-         "args": "None",
-         "id": 213546050186360511
-      },
-      {
-         "name": "ufwD",
-         "bool": "None",
-         "args": "None",
-         "id": 194594876564861602
-      },
-      {
-         "name": "f2bE",
-         "bool": "True",
-         "args": "None",
-         "id": 174149946064893431
-      },
-      {
-         "name": "f2bD",
-         "bool": "None",
-         "args": "None",
-         "id": 255414737350607595
-      },
-      {
-         "name": "usbE",
-         "bool": "None",
-         "args": "None",
-         "id": 263018632224000542
-      },
-      {
-         "name": "ufwS",
-         "bool": "None",
-         "args": "None",
-         "id": 124601468034890564
-      },
-      {
-         "name": "ufwBP",
-         "bool": "None",
-         "args": "None",
-         "id": 451361526694374776
-      },
-      {
-         "name": "ufwAP",
-         "bool": "None",
-         "args": "None",
-         "id": 326362207710101556
-      },
-      {
-         "name": "ufwAI",
-         "bool": "True",
-         "args": "203.0.56.90",
-         "id": 156032388352505362
-      },
-      {
-         "name": "ufwBI",
-         "bool": "True",
-         "args": "203.0.56.89",
-         "id": 156384783488920966
-      },
-      {
-         "name": "ufwDel",
-         "bool": "True",
-         "args": "25",
-         "id": 227570143566747332
-      },
-      {
-         "name": "torD",
-         "bool": "True",
-         "args": "None",
-         "id": 279745690016785813
-      },
-      {
-         "name": "sshp",
-         "bool": "True",
-         "args": "2200",
-         "id": 249746520959275740
-      },
-      {
-         "name": "sshPAE",
-         "bool": "True",
-         "args": "None",
-         "id": 751891375988278035
-      },
-      {
-         "name": "sshPAD",
-         "bool": "None",
-         "args": "None",
-         "id": 173213925518526525
-      },
-      {
-         "name": "sshRE",
-         "bool": "True",
-         "args": "None",
-         "id": 100183796493969160
-      },
-      {
-         "name": "sshRD",
-         "bool": "None",
-         "args": "None",
-         "id": 181500378830133344
-      },
-      {
-         "name": "sshXFE",
-         "bool": "True",
-         "args": "None",
-         "id": 908020822052418092
-      },
-      {
-         "name": "sshXFD",
-         "bool": "None",
-         "args": "None",
-         "id": 491140407706701361
-      },
-      {
-         "name": "pwdp",
-         "bool": "None",
-         "args": "None",
-         "id": 334213390032417751
-      },
-      {
-         "name": "rmpk",
-         "bool": "True",
-         "args": "None",
-         "id": 186071312613991373
-      },
-      {
-         "name": "ufwI",
-         "bool": "True",
-         "args": "None",
-         "id": 303449748476786333
-      },
-      {
-         "name": "ufwE",
-         "bool": "None",
-         "args": "None",
-         "id": 282425626587514689
-      },
-      {
-         "name": "ufwD",
-         "bool": "None",
-         "args": "None",
-         "id": 769162860085983501
-      },
-      {
-         "name": "f2bE",
-         "bool": "True",
-         "args": "None",
-         "id": 336066212262400555
-      },
-      {
-         "name": "f2bD",
-         "bool": "None",
-         "args": "None",
-         "id": 203300040607515747
-      },
-      {
-         "name": "usbE",
-         "bool": "None",
-         "args": "None",
-         "id": 170922654859686581
-      },
-      {
-         "name": "ufwS",
-         "bool": "None",
-         "args": "None",
-         "id": 238292283505271612
-      },
-      {
-         "name": "ufwBP",
-         "bool": "None",
-         "args": "None",
-         "id": 144194061706537931
-      },
-      {
-         "name": "ufwAP",
-         "bool": "None",
-         "args": "None",
-         "id": 325916478352839434
-      },
-      {
-         "name": "ufwAI",
-         "bool": "None",
-         "args": "None",
-         "id": 551325448578217948
-      },
-      {
-         "name": "ufwBI",
-         "bool": "None",
-         "args": "None",
-         "id": 330745160245864223
-      },
-      {
-         "name": "ufwDel",
-         "bool": "True",
-         "args": "25",
-         "id": 574005853688081829
-      },
-      {
-         "name": "torD",
-         "bool": "True",
-         "args": "None",
-         "id": 276547756356278966
-      },
-      {
-         "name": "sshp",
-         "bool": "None",
-         "args": "None",
-         "id": 231542248634079457
-      },
-      {
-         "name": "sshPAE",
-         "bool": "None",
-         "args": "None",
-         "id": 191524761796671282
-      },
-      {
-         "name": "sshPAD",
-         "bool": "None",
-         "args": "None",
-         "id": 874813472661151720
-      },
-      {
-         "name": "sshRE",
-         "bool": "None",
-         "args": "None",
-         "id": 149303533338904372
-      },
-      {
-         "name": "sshRD",
-         "bool": "None",
-         "args": "None",
-         "id": 260448078353295967
-      },
-      {
-         "name": "sshXFE",
-         "bool": "None",
-         "args": "None",
-         "id": 107159523700975081
-      },
-      {
-         "name": "sshXFD",
-         "bool": "None",
-         "args": "None",
-         "id": 827574630132809331
-      },
-      {
-         "name": "pwdp",
-         "bool": "None",
-         "args": "None",
-         "id": 274352716776404161
-      },
-      {
-         "name": "rmpk",
-         "bool": "True",
-         "args": "None",
-         "id": 266487010294989325
-      },
-      {
-         "name": "ufwI",
-         "bool": "True",
-         "args": "None",
-         "id": 335906874124269818
-      },
-      {
-         "name": "ufwE",
-         "bool": "None",
-         "args": "None",
-         "id": 714358755966203145
-      },
-      {
-         "name": "ufwD",
-         "bool": "None",
-         "args": "None",
-         "id": 240767271421349892
-      },
-      {
-         "name": "f2bE",
-         "bool": "True",
-         "args": "None",
-         "id": 277789887821929263
-      },
-      {
-         "name": "f2bD",
-         "bool": "None",
-         "args": "None",
-         "id": 201085924628907036
-      },
-      {
-         "name": "usbE",
-         "bool": "None",
-         "args": "None",
-         "id": 162460448062368483
-      },
-      {
-         "name": "ufwS",
-         "bool": "None",
-         "args": "None",
-         "id": 281461116279852423
-      },
-      {
-         "name": "ufwBP",
-         "bool": "None",
-         "args": "None",
-         "id": 324888609201132802
-      },
-      {
-         "name": "ufwAP",
-         "bool": "None",
-         "args": "None",
-         "id": 179557731985122861
-      },
-      {
-         "name": "ufwAI",
-         "bool": "None",
-         "args": "None",
-         "id": 111252472482246187
-      },
-      {
-         "name": "ufwBI",
-         "bool": "None",
-         "args": "None",
-         "id": 144110308502216541
-      },
-      {
-         "name": "ufwDel",
-         "bool": "True",
-         "args": "25",
-         "id": 184181011131950769
-      },
-      {
-         "name": "torD",
-         "bool": "True",
-         "args": "None",
-         "id": 915339414874710476
-      },
-      {
-         "name": "sshp",
-         "bool": "None",
-         "args": "None",
-         "id": 236941710809091088
-      },
-      {
-         "name": "sshPAE",
-         "bool": "None",
-         "args": "None",
-         "id": 834316957280609156
-      },
-      {
-         "name": "sshPAD",
-         "bool": "None",
-         "args": "None",
-         "id": 304310669583666540
-      },
-      {
-         "name": "sshRE",
-         "bool": "None",
-         "args": "None",
-         "id": 110800567526047715
-      },
-      {
-         "name": "sshRD",
-         "bool": "None",
-         "args": "None",
-         "id": 286614712193555865
-      },
-      {
-         "name": "sshXFE",
-         "bool": "None",
-         "args": "None",
-         "id": 190593358221177515
-      },
-      {
-         "name": "sshXFD",
-         "bool": "None",
-         "args": "None",
-         "id": 480943312961012144
-      },
-      {
-         "name": "pwdp",
-         "bool": "None",
-         "args": "None",
-         "id": 335417376862323251
-      },
-      {
-         "name": "rmpk",
-         "bool": "None",
-         "args": "None",
-         "id": 122890922932038243
-      },
-      {
-         "name": "ufwI",
-         "bool": "None",
-         "args": "None",
-         "id": 151093986066108890
-      },
-      {
-         "name": "ufwE",
-         "bool": "None",
-         "args": "None",
-         "id": 142770856705415657
-      },
-      {
-         "name": "ufwD",
-         "bool": "None",
-         "args": "None",
-         "id": 409912912387615081
-      },
-      {
-         "name": "f2bE",
-         "bool": "None",
-         "args": "None",
-         "id": 304583540995106347
-      },
-      {
-         "name": "f2bD",
-         "bool": "None",
-         "args": "None",
-         "id": 587371519542868341
-      },
-      {
-         "name": "usbE",
-         "bool": "None",
-         "args": "None",
-         "id": 291741012418073250
-      },
-      {
-         "name": "ufwS",
-         "bool": "None",
-         "args": "None",
-         "id": 844501141129079567
-      },
-      {
-         "name": "ufwBP",
-         "bool": "None",
-         "args": "None",
-         "id": 237380256500164965
-      },
-      {
-         "name": "ufwAP",
-         "bool": "None",
-         "args": "None",
-         "id": 296460879268156984
-      },
-      {
-         "name": "ufwAI",
-         "bool": "None",
-         "args": "None",
-         "id": 463470306757977063
-      },
-      {
-         "name": "ufwBI",
-         "bool": "None",
-         "args": "None",
-         "id": 246133244416653179
-      },
-      {
-         "name": "ufwDel",
-         "bool": "True",
-         "args": "25",
-         "id": 260168134938672981
-      },
-      {
-         "name": "torD",
-         "bool": "None",
-         "args": "None",
-         "id": 336295016387987855
-      },
-      {
-         "name": "sshp",
-         "bool": "None",
-         "args": "None",
-         "id": 491297099439767765
-      },
-      {
-         "name": "sshPAE",
-         "bool": "None",
-         "args": "None",
-         "id": 321766991688488842
-      },
-      {
-         "name": "sshPAD",
-         "bool": "None",
-         "args": "None",
-         "id": 311038020751755323
-      },
-      {
-         "name": "sshRE",
-         "bool": "None",
-         "args": "None",
-         "id": 147909298693037214
-      },
-      {
-         "name": "sshRD",
-         "bool": "None",
-         "args": "None",
-         "id": 306412256830175563
-      },
-      {
-         "name": "sshXFE",
-         "bool": "None",
-         "args": "None",
-         "id": 197540870348896284
-      },
-      {
-         "name": "sshXFD",
-         "bool": "None",
-         "args": "None",
-         "id": 157239815275940343
+         "name": "None",
+         "settings": {},
+         "templates": [
+            "None",
+            "Testing"
+         ],
+         "id": 925292328582479880
+      },
+      {
+         "name": "Network",
+         "settings": {
+            "ufwBP": {
+               "bool": "None",
+               "args": "None",
+               "id": 451361526694374776
+            },
+            "ufwAP": {
+               "bool": "True",
+               "args": "6000",
+               "id": 326362207710101556
+            },
+            "ufwAI": {
+               "bool": "True",
+               "args": "None",
+               "id": 156032388352505362
+            },
+            "ufwBI": {
+               "bool": "True",
+               "args": "None",
+               "id": 156384783488920966
+            },
+            "ufwDel": {
+               "bool": "True",
+               "args": "29",
+               "id": 227570143566747332
+            },
+            "torD": {
+               "bool": "True",
+               "args": "None",
+               "id": 279745690016785813
+            },
+            "sshp": {
+               "bool": "True",
+               "args": "None",
+               "id": 249746520959275740
+            },
+            "sshPAE": {
+               "bool": "True",
+               "args": "None",
+               "id": 751891375988278035
+            },
+            "sshPAD": {
+               "bool": "None",
+               "args": "None",
+               "id": 173213925518526525
+            },
+            "sshRE": {
+               "bool": "True",
+               "args": "None",
+               "id": 100183796493969160
+            },
+            "sshRD": {
+               "bool": "None",
+               "args": "None",
+               "id": 181500378830133344
+            },
+            "sshXFE": {
+               "bool": "True",
+               "args": "None",
+               "id": 908020822052418092
+            },
+            "sshXFD": {
+               "bool": "None",
+               "args": "None",
+               "id": 491140407706701361
+            }
+         },
+         "templates": [],
+         "id": 138533009188929937
+      },
+      {
+         "name": "Testing",
+         "settings": {
+            "pwdp": {
+               "bool": "None",
+               "args": "None",
+               "id": 326724853050043943
+            },
+            "rmpk": {
+               "bool": "True",
+               "args": "None",
+               "id": 332229282697495453
+            },
+            "ufwI": {
+               "bool": "True",
+               "args": "None",
+               "id": 256018396983239556
+            },
+            "ufwE": {
+               "bool": "None",
+               "args": "None",
+               "id": 213546050186360511
+            },
+            "ufwD": {
+               "bool": "None",
+               "args": "None",
+               "id": 194594876564861602
+            },
+            "f2bE": {
+               "name": "f2bE",
+               "bool": "True",
+               "args": "None",
+               "id": 174149946064893431
+            },
+            "f2bD": {
+               "bool": "None",
+               "args": "None",
+               "id": 255414737350607595
+            },
+            "usbE": {
+               "bool": "True",
+               "args": "None",
+               "id": 263018632224000542
+            },
+            "ufwS": {
+               "bool": "None",
+               "args": "None",
+               "id": 124601468034890564
+            },
+            "ufwBP": {
+               "bool": "None",
+               "args": "None",
+               "id": 451361526694374776
+            },
+            "ufwAP": {
+               "bool": "None",
+               "args": "None",
+               "id": 326362207710101556
+            },
+            "ufwAI": {
+               "bool": "True",
+               "args": "203.0.56.90",
+               "id": 156032388352505362
+            },
+            "ufwBI": {
+               "bool": "True",
+               "args": "203.0.56.89",
+               "id": 156384783488920966
+            },
+            "ufwDel": {
+               "bool": "True",
+               "args": "25",
+               "id": 227570143566747332
+            },
+            "torD": {
+               "bool": "True",
+               "args": "None",
+               "id": 279745690016785813
+            },
+            "sshp": {
+               "bool": "True",
+               "args": "2200",
+               "id": 249746520959275740
+            },
+            "sshPAE": {
+               "bool": "True",
+               "args": "None",
+               "id": 751891375988278035
+            },
+            "sshPAD": {
+               "bool": "None",
+               "args": "None",
+               "id": 173213925518526525
+            },
+            "sshRE": {
+               "bool": "True",
+               "args": "None",
+               "id": 100183796493969160
+            },
+            "sshRD": {
+               "bool": "None",
+               "args": "None",
+               "id": 181500378830133344
+            },
+            "sshXFE": {
+               "bool": "True",
+               "args": "None",
+               "id": 908020822052418092
+            },
+            "sshXFD": {
+               "bool": "None",
+               "args": "None",
+               "id": 491140407706701361
+            }
+         },
+         "templates": [],
+         "id": 275077284968315907
       }
    ]
 }
